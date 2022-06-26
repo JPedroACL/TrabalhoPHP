@@ -1,6 +1,6 @@
 function mascaratel(mascarainput) {
-    const tamanho = document.getElementById('tel').maxLength
-    let tel = document.getElementById('tel').value
+    const tamanho = document.getElementById('phone').maxLength
+    let tel = document.getElementById('phone').value
     console.log(tamanho)
   
     const mascara = {
@@ -10,7 +10,7 @@ function mascaratel(mascarainput) {
     };
   
     if (tel.length == tamanho) {
-        document.getElementById('tel').value = mascara[mascarainput]
+        document.getElementById('phone').value = mascara[mascarainput]
     }
   
   
@@ -20,6 +20,13 @@ function mascaratel(mascarainput) {
       var telefone = document.getElementById("phone")
 
       if (telefone.value == "") {
+
+        alert("campo obrigatório não preenchido") 
+
+    
+      }
+
+      if (telefone.value < 11) {
 
         alert("campo obrigatório não preenchido")
     
